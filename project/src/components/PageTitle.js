@@ -1,8 +1,7 @@
 import React from 'react'
-
-function PageTitle() {
+function PageTitle({children}) {
   return (
-    <div>PageTitle</div>
+    <div className='toDoTitle'>{children}</div>
   )
 }
 

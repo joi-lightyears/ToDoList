@@ -1,9 +1,10 @@
 import React from 'react';
 import PageTitle from './components/PageTitle';
+import "./style.scss"
 function App() {
   return (
     <div className="container">
-      <PageTitle/>
+      <PageTitle>TODO</PageTitle>
     </div>
   );
 }
