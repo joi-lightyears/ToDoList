@@ -13,7 +13,7 @@ function Header() {
           <option value="incomplete">Incomplete</option>
           <option value="completed">Completed</option>
         </SelectButton>
-          <ToDoModal modalOpen={modalOpen} setModalOpen={setModalOpen}/>
+          <ToDoModal type='add' modalOpen={modalOpen} setModalOpen={setModalOpen}/>
     </div>
   )
 }
