@@ -4,6 +4,7 @@ import { MdOutlineClose } from "react-icons/md"
 import Button from './Button'
 import { useDispatch } from 'react-redux';
 import { addToDo } from '../slices/toDoSlice';
+import toast from 'react-hot-toast';
 import {v4 as uuid} from "uuid"
 function ToDoModal({modalOpen, setModalOpen}) {
   const [title, setTitle] = useState('')
@@ -11,14 +12,17 @@ function ToDoModal({modalOpen, setModalOpen}) {
   const dispatch = useDispatch()
   const handleSubmit = (e)=>{
     e.preventDefault()
-    if (title === status){
+    if (title && status){
       dispatch(addToDo({
         id: uuid(),
         title,
         status,
-        time: new Date().toLocalDateString(),
+        time: new Date().toLocaleString(),
       }))
-      
+      toast.success('Task Added Succesfully')
+      setModalOpen(false)
+    }else{
+      toast.error("Title shouldn't be empty")
     }
   }
   return (

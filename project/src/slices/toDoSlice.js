@@ -14,7 +14,8 @@ const initialValue ={
 export const toDoSlice = createSlice({
     name: 'todo',
     initialState: initialValue,
-    reducers: (state, action)=>{
+    reducers: {
+    addToDo: (state, action)=>{
         state.todoList.push(action.payload);
         const todoList = window.localStorage.getItem('todoList')
         if(todoList){
@@ -31,6 +32,7 @@ export const toDoSlice = createSlice({
             ])
             );
         }
+    }
     }
 })
 export const {addToDo}=toDoSlice.actions
