@@ -11,7 +11,7 @@
 	cursor: pointer;
 	overflow: hidden;
 	&__select {
-		color: var(--black-2);
+		color: var(--gray-1);
 		font-family: Poppins;
 		padding: 1rem;
 		border: none;
@@ -22,7 +22,7 @@
 	}
 }
 .button--primary {
-	background-color: var(--primaryPurple);
+	background-color: var(--primaryCyan);
 	color: var(--white);
 }
 .button--secondary {
