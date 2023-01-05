@@ -4,7 +4,7 @@ import { getClasses } from '../utils/getClasses'
 import {format} from 'date-fns/esm'
 import { MdDelete, MdEdit } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
-import { deleteTodo } from '../slices/toDoSlice';
+import { deleteTodo, updateTodo } from '../slices/toDoSlice';
 import toast from 'react-hot-toast';
 import ToDoModal from './ToDoModal';
 import CheckButton from './CheckButton';
@@ -28,11 +28,17 @@ function TodoItem({todo}) {
     const handleUpdate =()=>{
         setUpdateModalOpen(true)
     }
+    const handleCheck=()=>{
+        setChecked(!checked);
+        dispatch(
+            updateTodo({ ...todo, status: checked ? 'incomplete' : 'completed' })
+        );
+    }
   return (
     <>
         <div className={styles.item}>
             <div className={styles.todoDetails}>
-                <CheckButton checked={checked} setChecked={setChecked}/>
+                <CheckButton checked={checked} handleCheck={handleCheck}/>
                 <div className={styles.texts}>
                     <p className={getClasses([styles.todoText, todo.status === 'completed' && styles['todoText--completed']])}>
                         {todo.title}
