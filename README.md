@@ -6,11 +6,8 @@
 # ToDoList project
 # Achived
 
->>>>>>> 6a447694ff8fd800b5d799655fc6e17a8c9d8008
 > how to use toast notifi in reac-hot-toast
-
 > how redux works (still confused but I'll try this on another project)
-<<<<<<< HEAD
 > how to use framer motion
 
 
