@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 # ToDoList
 <img align="middle" alt="gif" src="https://media.giphy.com/media/uUS0mdf1UkfsaEadwL/giphy.gif">
 # Achieved
-=======
-# ToDoList project
-# Achived
-
 > how to use toast notifi in reac-hot-toast
 > how redux works (still confused but I'll try this on another project)
 > how to use framer motion
+
+
 
 
  
@@ -57,7 +54,4 @@ This is a simple todolist project for studying purposes. You can create tasks yo
  # Made by
 [Nguyen Thanh Dat](https://github.com/joi-lightyears)
 
-=======
 
-> how to use framer motion
->>>>>>> 6a447694ff8fd800b5d799655fc6e17a8c9d8008
